@@ -1,0 +1,43 @@
+
+	Task1 (possible_double_cuts)
+	În variabila paths, ce este returnată la finalul funcției, am adăugat
+recursiv toate locațiile unde se găsesec două negații consecutive, pentru a
+efectua operația de ștergere. Pentru a determina existenta negațiilor
+consecutive am verifcat pentru nodul curent dacă are un singur subgraf copil și
+nu are atomi.
+	Dacă condiția este îndeplinită, se adaugă pe linia corespunzătoare din
+variabila paths indicele. Pentru toate subgrafurile am apelat recursiv funcția.
+
+	Task2 (double_cut) 
+	Am creat o copie a grafului inițial, newGraph, pe care o vom modifica și o
+vom returna. Folosind un pointer la acest graf, ne-am poziționat la fiecare
+locație indicata prin vectorul de locații where, iar apoi am reținut în
+variabila child copilul din care s-au omis cele doua negații. Am înlocuit
+copilul cu dublă negație cu cel reținut în child (fară negație).
+
+	Task3 (possible_erasures)
+	Asemănător cu funcția de la task-ul 1, doar că am modificat condiția: am
+verificat că subgraful se află pe nivel impar și că nu ne aflăm într-unul din
+cazurile: 
+	- numărul de subgrafuri este 0, dar există un atom; 
+	- numărul de atomi este 0, dar există un subgraf.
+De asemenea, ne-am asiguarat că nodul șters nu este rădăcină (level != -1). 
+
+	Task4 (erase)
+	Asemănător cu task-ul 2, doar că ștergem subgraful copil al nodului pe care 
+ne-am poziționat. De asemena, am observat faptul că în reprezentarea grafului:
+	-subgrafurile sunt reprezentate în partea stangă;
+	-atomii sunt reprezentați în partea dreapta.
+
+	Task5 (possible_deiterations)
+	Am căutat pentru fiecare subgraf, respectiv atom în copii de pe același
+nivel ai nodului curent, descendenți identici, reținând în variabilă paths
+fiecare drum.
+
+	Task6 (deiterate)
+	Aceeași idee ca cea folosita la task-ul 4: ștergem subgraful copil al
+nodului pe care ne-am poziționat după parcurgerea vectorului where.
+
+	
+
+												-NS
