@@ -34,8 +34,6 @@ ne-am poziționat. De asemena, am observat faptul că în reprezentarea grafului
 nivel ai nodului curent, descendenți identici, reținând în variabilă paths
 fiecare drum.
 
-test
-
 	Task6 (deiterate)
 	Aceeași idee ca cea folosita la task-ul 4: ștergem subgraful copil al
 nodului pe care ne-am poziționat după parcurgerea vectorului where.
